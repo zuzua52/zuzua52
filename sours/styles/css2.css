@@ -1,0 +1,75 @@
+/* Контейнер для изображений товара */
+.property-images {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.property-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Стрелки для переключения изображений */
+.image-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.property-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto;
+}
+
+.property-image {
+    width: 100%;
+    height: auto;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты недвижимости - Золотой Ключ</title>
+    <link rel="stylesheet" href="sours/styles/css.css">
+    <link rel="stylesheet" href="sours/styles/csspro.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="sours/images/goldenk.png" alt="Лого" class="logo-img">
+                    <span class="logo-text">Золотой Ключ</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/#about">О нас</a></li>
+                <li><a href="/#services">Услуги</a></li>
+                <li><a href="properties.html">Объекты</a></li>
+                <li><a href="/#contact">Контакты</a></li>
+                <li><a href="admin.html">Управление</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="filter">
+            <h2>Фильтр объектов</h2>
+            <form id="filter-form">
+                <label for="price">Цена (₽):</label>
+                <input type="number" id="price-min" placeholder="Мин." name="price-min">
+                <input type="number" id="price-max" placeholder="Макс." name="price-max">
+
+                <label for="rooms">Количество комнат:</label>
+                <select id="rooms" name="rooms">
+                    <option value="">Любое</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3+ </option>
+                </select>
+
+                <label for="region">Район:</label>
+                <select id="region" name="region">
+                    <option value="">Любой</option>
+                    <option value="center">Центр</option>
+                    <option value="suburbs">Пригород</option>
+                </select>
+
+                <label for="type">Тип:</label>
+                <select id="type" name="type">
+                    <option value="">Любой</option>
+                    <option value="house">Дом</option>
+                    <option value="apartment">Квартира</option>
+                </select>
+
+                <button type="submit">Применить</button>
+            </form>
+        </section>
+
+        <section id="properties">
+            <h2>Объекты</h2>
+            <div class="property-grid" id="property-grid">
+                <!-- Объекты будут загружаться сюда -->
+                <div class="property-item" data-price="10000000" data-rooms="3" data-region="center" data-type="house">
+                    <img src="sours/images/dom.jpg" alt="Дом в центре города">
+                    <h3>Дом в центре города</h3>
+                    <p>Цена: 10,000,000 ₽</p>
+                    <p>Количество комнат: 3</p>
+                    <p>Район: Центр</p>
+                    <p>Тип: Дом</p>
+                    <a href="#" class="details-button">Подробнее</a>
+                </div>
+                <div class="property-item" data-price="8000000" data-rooms="2" data-region="suburbs" data-type="apartment">
+                    <img src="sours/images/townhouse.webp" alt="Квартира на побережье">
+                    <h3>Квартира на побережье</h3>
+                    <p>Цена: 8,000,000 ₽</p>
+                    <p>Количество комнат: 2</p>
+                    <p>Район: Пригород</p>
+                    <p>Тип: Квартира</p>
+                    <a href="#" class="details-button">Подробнее</a>
+                </div>
+                <div class="property-item" data-price="15000000" data-rooms="5" data-region="center" data-type="house">
+                    <img src="sours/images/zagorod.webp" alt="Офисное помещение">
+                    <h3>Офисное помещение</h3>
+                    <p>Цена: 15,000,000 ₽</p>
+                    <p>Количество комнат: 5</p>
+                    <p>Район: Центр</p>
+                    <p>Тип: Дом</p>
+                    <a href="#" class="details-button">Подробнее</a>
+                </div>
+                <div class="property-item" data-price="16000000" data-rooms="4" data-region="center" data-type="house">
+                    <img src="sours/images/zagorod.webp" alt="Офисное помещение">
+                    <h3>Офисное помещение</h3>
+                    <p>Цена: 14,000,000 ₽</p>
+                    <p>Количество комнат: 2</p>
+                    <p>Район: Центр</p>
+                    <p>Тип: Квартира</p>
+                    <a href="#" class="details-button">Подробнее</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Золотой Ключ. Все права защищены.</p>
+    </footer>
+    <script src="filter.js"></script>
+</body>
+</html>
